@@ -1,0 +1,2 @@
+# EDOR
+Adaptive HTML template
