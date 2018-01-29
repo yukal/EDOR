@@ -1,0 +1,116 @@
+.alert {
+  position: relative;
+  padding: 30px 20px;
+  text-align: center;
+  background-color: #fff3e9;
+  border-radius: $border-radius-base;
+  //-webkit-border-radius: 4px;
+  //-moz-border-radius: 4px;
+  //-ms-border-radius: 4px;
+  //-o-border-radius: 4px;
+
+  //button {
+  //  outline: 0;
+  //  border: 0;
+  //  border-radius: $border-radius-base+1px;
+  //  //-webkit-border-radius: 5px;
+  //  //-moz-border-radius: 5px;
+  //
+  //  background: #ffc847;
+  //  background: -moz-linear-gradient(top, #ffc847 4%, #ffac00 82%);
+  //  background: -webkit-linear-gradient(top, #ffc847 4%, #ffac00 82%);
+  //  background: linear-gradient(to bottom, #ffc847 4%, #ffac00 82%);
+  //  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc847', endColorstr='#ffac00', GradientType=0);
+  //
+  //  &:hover {
+  //    background: #ffbb31;
+  //    background: -moz-linear-gradient(top, #ffbb31 4%, #ee9900 82%);
+  //    background: -webkit-linear-gradient(top, #ffbb31 4%, #ee9900 82%);
+  //    background: linear-gradient(to bottom, #ffbb31 4%, #ee9900 82%);
+  //    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbb31', endColorstr='#ee9900', GradientType=0);
+  //  }
+  //}
+  //
+  //button {
+  //  margin: 0;
+  //  padding: 15px 45px;
+  //  font-size: 28px;
+  //  font-family: 'Roboto Slab', sans-serif;
+  //}
+
+  .title {
+    display: block;
+    margin-top: 0;
+    //margin-bottom: 15px;
+    font-family: $font-family-ascended;
+    font-weight: bold;
+    //font-size: 30px;
+    + .description {
+      margin-bottom: 0;
+    }
+  }
+
+  &.exclaim{
+    &:before {
+      content: '\e90d';
+      position: absolute;
+      top: -32px;
+      left: calc(50% - 24px);
+      font-family: 'icomoon';
+      font-size: 48px;
+      color: #F44336;
+    }
+  }
+
+  // >= 480px
+  @media (min-width: $screen-xs) {
+    padding: 60px 40px;
+  }
+
+  // <= 767px
+  @media (max-width: $screen-sm - 1) {
+    .title {
+      font-size: 24px;
+      + .description {
+        font-size: 18px;
+      }
+    }
+
+    .item {
+      margin-bottom: $margin-sm;
+    }
+
+    .btn.main {
+      font-size: 20px !important;
+    }
+
+  }
+
+  // >= 768px
+  @media (min-width: $screen-sm) {
+    .title {
+      margin-bottom: 15px;
+      font-size: 30px;
+      + .description {
+        font-size: 24px;
+      }
+    }
+  }
+
+  // >= 992px
+  @media (min-width: $screen-md) {
+    .title {
+      font-size: 34px;
+    }
+
+    .description {
+      //font-size: 26px;
+      //line-height: 36px;
+    }
+  }
+
+  // >= 1200px
+  @media (min-width: $screen-lg) {
+    //
+  }
+}

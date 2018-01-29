@@ -1,0 +1,26 @@
+@mixin typography-heads($set) {
+  @each $index,$size in $set {
+    h#{$index},.h#{$index} {
+      font-size: $size+px;
+    }
+  }
+}
+
+$font-size-set-xs: (1:36, 2:30, 3:24, 4:18, 5:16, 6:14);
+$font-size-set-sm: (1:48, 2:36, 3:30, 4:24, 5:18, 6:16);
+$font-size-set-md: (1:60, 2:48, 3:36, 4:30, 5:24, 6:18);
+
+@media (max-width: 340px) {
+  //h1,h2,h3,h4,h5,h6
+  @include typography-heads($font-size-set-xs);
+}
+
+@media (min-width: 768px) {
+  //h1,h2,h3,h4,h5,h6
+  @include typography-heads($font-size-set-sm);
+}
+
+@media (min-width: 992px) {
+  //h1,h2,h3,h4,h5,h6
+  @include typography-heads($font-size-set-md);
+}

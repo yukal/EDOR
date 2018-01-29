@@ -1,0 +1,58 @@
+@import 'partials/custom/mixins';
+@import 'partials/custom/fonts';
+
+//Bootstrap
+@import 'partials/variables-custom';
+@import 'partials/bootstrap-custom';
+//@import '../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap-custom.scss';
+
+
+/* Custom Style */
+
+@import "partials/custom/variables";
+
+/* ICONS */
+@import "partials/custom/svg-icons";
+
+/* HEADER */
+@import "partials/custom/header";
+
+/* GENERAL */
+@import "partials/custom/general";
+
+/* BUTTONS */
+@import "partials/custom/buttons";
+
+/* TABLES */
+@import "partials/custom/table";
+
+/* FACTOIDS */
+@import "partials/custom/factoids";
+
+/* ALERT */
+@import "partials/custom/alert";
+
+/* REQUEST FORMS */
+@import "partials/custom/request";
+
+/* INDEX */
+@import "partials/custom/pg-index";
+
+/* E-SHOP */
+@import "partials/custom/eshop";
+
+/* ABOUT AUTHOR */
+@import "partials/custom/about-author";
+
+/* NEWS BLOG */
+@import "partials/custom/news-blog";
+
+/* CLOUD */
+@import "partials/custom/cloud";
+
+/* FOOTER */
+@import "partials/custom/footer";
+
+/* COPYRIGHT */
+@import "partials/custom/copyright";
+

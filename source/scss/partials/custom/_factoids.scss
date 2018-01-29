@@ -1,0 +1,141 @@
+ol.factoids {
+  padding: 0;
+  counter-reset: myCounter;
+  font-family: $font-family-sans-serif;
+  font-size: 19px;
+  text-align: left;
+
+  li {
+    @include clearfix;
+    list-style: none;
+    margin-bottom: 10px;
+
+    &:before {
+      float: left;
+      display: inline-block;
+      margin: 0 10px 30px 0;
+      width: 32px;
+      height: 32px;
+      counter-increment: myCounter;
+      content: counter(myCounter);
+
+      font-family: $font-family-ascended;
+      font-weight: bold;
+      font-size: 21px;
+      text-align: center;
+      color: $gray-base;
+      background: #ffac00;
+    }
+  }
+
+  @media (min-width: 480px) {
+    padding: 0 30px;
+    li {
+      margin-bottom:0;
+    }
+  }
+
+  @media (min-width: 640px) {
+    padding: 0 112px;
+    //padding: 0;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: $margin-xs;
+  }
+
+  @media (min-width: 768px) {
+    //margin-bottom: $margin-sm;
+    padding: 0;
+    font-size: 23px;
+    line-height: 44px;
+
+    li:before {
+      float: none;
+      margin: 0 20px 0 0;
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+}
+
+ul.factoids-pics {
+  @include list-unstyled;
+
+  .item {
+    svg {
+      display: block;
+      margin-bottom: 10px;
+      width: 100px;
+      max-width: 120px;
+      max-height: 120px;
+    }
+    a {
+      font-family: $font-family-ascended;
+      font-size: 28px;
+      //line-height: 1.2;
+    }
+    strong {
+      display: block;
+      margin-top: 12px;
+      font-weight: normal;
+
+      &.lead {
+        font-family: $font-family-ascended;
+        font-weight: 800;
+      }
+      //font-size: 24px;
+      //line-height: 36px;
+    }
+  }
+
+
+  @media (min-width: 440px) and (max-width: $screen-sm - 1) {
+    .item {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+  }
+
+  // <= 767px
+  @media (max-width: $screen-sm - 1) {
+    text-align: center;
+
+    .item {
+      //margin-top: 40px;
+      svg {
+        margin: 0 auto;
+      }
+      .lead {
+        margin-top: 0;
+        margin-bottom: 6px;
+      }
+      +.item {
+        margin-top: 40px;
+      }
+    }
+    //.title {
+    //margin-bottom: 40px;
+    //font-size: $font-size-large + 7;
+    //font-size: 28px;
+    //font-size: 5.235vw;
+    //}
+  }
+
+  //768px
+  @media (min-width: $screen-sm) {
+    .item {
+      strong {
+        font-size: 18px;
+
+        &.lead {
+          margin-bottom: 10px;
+          font-size: 30px;
+          line-height: 36px;
+        }
+      }
+    }
+  }
+
+}
+

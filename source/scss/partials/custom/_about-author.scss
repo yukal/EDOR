@@ -1,0 +1,80 @@
+.about-author {
+  p {
+    margin: 20px 0 0 40px;
+  }
+  img {
+    margin: auto;
+    max-height: 450px;
+  }
+  blockquote {
+    position: relative;
+    margin: 0 0 0 40px;
+    padding: 0;
+    border: 0;
+    font-size: 24px;
+    line-height: 40px;
+    font-style: italic;
+
+    &:before {
+      content: '«';
+      display: inline-block;
+      color: #f8aa12;
+      font-size: 60px;
+      position: absolute;
+      top: -2px;
+      left: -45px;
+    }
+
+    &:after {
+      content: '»';
+      display: inline-block;
+      color: #f8aa12;
+      font-size: 60px;
+      line-height: 0;
+      position: relative;
+      top: 6px;
+    }
+  }//blockquote
+
+
+
+  //340px
+  @media (max-width: $screen-xs - 140px) {
+  }
+
+  //767px
+  @media (max-width: $screen-sm - 1) {
+  }
+
+  //768px
+  @media (min-width: $screen-sm) {
+  }
+
+  //992px
+  @media (min-width: $screen-md) {
+
+    position: relative;
+
+    .block-image {
+      position: relative;
+      padding-left: 0;
+      img {
+        position: relative;
+        bottom: 15px;
+      }
+    }
+    img {
+      max-height: initial;
+    }
+    .block-image, .block-text {
+      float: none !important;
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  //1200px
+  @media (min-width: $screen-lg) {
+  }
+
+}//.about-author

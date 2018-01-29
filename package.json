@@ -1,0 +1,35 @@
+{
+  "name": "edor",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Yukal Alexander <yukal@email.ua>",
+  "description": "Adaptive HTML template",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.18.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-include": "^2.3.1",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.11",
+    "imagemin-pngquant": "^5.0.0"
+  },
+  "homepage": "https://github.com/yukal/EDOR#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yukal/EDOR.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yukal/EDOR/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

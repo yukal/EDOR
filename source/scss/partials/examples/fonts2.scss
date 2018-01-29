@@ -1,0 +1,39 @@
+@mixin typography-heads($_set) {
+  $typography-head-set: (1:36, 2:30, 3:24, 4:18, 5:16, 6:14) !default;
+  @if($_set == xs) {$typography-head-set: (1:36, 2:30, 3:24, 4:18, 5:16, 6:14) !global;}
+  @if($_set == sm) {$typography-head-set: (1:48, 2:36, 3:30, 4:24, 5:18, 6:16) !global;}
+  @if($_set == md) {$typography-head-set: (1:60, 2:48, 3:36, 4:30, 5:24, 6:18) !global;}
+
+  @each $index,$size in $typography-head-set {
+    h#{$index},.h#{$index} {
+      font-size: $size+px;
+    }
+  }
+}
+
+$types-set: (
+  'max-width: 340px': 'xs',
+7  'min-width: #{$screen-sm-min}': 'sm',
+  'min-width: #{$screen-md-min}': 'md'
+);
+
+@each $media, $size in $types-set {
+  @media (#{$media}) {
+    // h1, h2, h3, h4, h5, h6
+    @include typography-heads($size);
+  }
+}
+
+
+//@media (max-width: 340px) {
+//  // h1, h2, h3, h4, h5, h6
+//  @include typography-heads(xs);
+//}
+//@media (min-width: $screen-sm-min) {
+//  // h1, h2, h3, h4, h5, h6
+//  @include typography-heads(sm);
+//}
+//@media (min-width: $screen-md-min) {
+//  // h1, h2, h3, h4, h5, h6
+//  @include typography-heads(md);
+//}

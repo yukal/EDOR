@@ -1,0 +1,123 @@
+/* ОТПРАВИТЬ ЗАЯВКУ */
+
+.request {
+  //padding: 80px 0;
+  padding: 8vw;
+  background-color: #fff3e9;
+  //border-radius: $border-radius-base;
+  //-webkit-border-radius: 4px;
+  //-moz-border-radius: 4px;
+
+  .title {
+    margin-top: 0;
+    margin-bottom: $margin-md;
+    text-align: center;
+    //font-size: 24px;
+  }
+
+  .screenshots label {
+    margin-bottom: 15px !important;
+  }
+
+  form {
+    //width: 80%;
+    //padding-left: 8vw;
+    //padding-right: 8vw;
+    //@include center-block();
+    //margin: 0 auto;
+  }
+
+  .btn {
+    @include center-block();
+    margin-top: $margin-md;
+  }
+
+  textarea {
+    padding: 7px 0 0;
+    //font-size: 18px;
+    //color: #000;
+    //border: 0;
+    //background: transparent;
+    //box-shadow: none;
+    //border-radius: 0;
+    //border-bottom: 1px solid #b2aaa3;
+    //outline: 0;
+
+    &:focus {
+      //box-shadow: none;
+    }
+  }
+
+  .form-group:last-child {
+    margin-top: 70px;
+  }
+
+
+
+  @media (min-width: 399px) {
+    h2 {
+      //font-size: 30px;
+    }
+  }
+
+  // <= 480px
+  //@media (max-width: $screen-xs)
+  @media (max-width: $screen-md) {
+    @include make-row();
+    //margin-left: -$navbar-padding-horizontal;
+    //margin-right: -$navbar-padding-horizontal;
+    border-radius: 0;
+    .title {
+      //word-spacing: 2px;
+      letter-spacing: 1px;
+    }
+  }
+
+  // <= 767px
+  @media (max-width: $screen-sm - 1) {
+    padding-top: 12vw;
+    padding-bottom: 12vw;
+    .title {
+      //margin-bottom: $margin-md;
+    }
+    //.form-group {
+    //  margin-left: 0;
+    //  margin-right: 0;
+    //}
+    input[type="text"], textarea {
+      font-size: 18px;
+      font-weight: normal;
+    }
+    button {
+      font-size: $font-size-lead-sm !important;
+    }
+    .form-group {
+      margin-bottom: $margin-xs + 8;
+      label {
+        margin: 0;
+      }
+    }
+  }
+
+  // >= 768px
+  @media (min-width: $screen-sm) {
+    padding: 8vw;
+  }
+
+
+  // >= 992px
+  @media (min-width: $screen-md) {
+    border-radius: $border-radius-large;
+    .title {
+      //margin-bottom: $margin-md;
+    }
+  }
+
+
+  // >= 1200px
+  @media (min-width: $screen-lg) {
+    //
+  }
+
+
+}

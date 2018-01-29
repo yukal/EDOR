@@ -1,0 +1,115 @@
+//= partials/_header.html
+
+<style>
+    .pre {
+        display: block;
+        margin: 1em 0px 1em;
+        padding: 20px;
+        white-space: pre;
+        font-family: monospace;
+        font-size: 16px;
+        background-color: #eaeaea;
+    }
+    .chars span {
+        font-size: 24px;
+    }
+    .chars a {
+        padding: 10px;
+        color: #000;
+        text-decoration: none;
+    }
+    .container svg {
+        width: 64px;
+        height: 64px;
+        margin: 20px;
+    }
+    .list-inline li {
+        padding: 0;
+        margin: 0;
+    }
+</style>
+
+    <!-- Init SVG Icons -->
+    <div class="hidden">
+        //= partials/pg-icons/icons.html
+    </div>
+
+    <div class="clearfix"></div><br>
+
+    <h3>Icons Font</h3>
+    <strong>Using:</strong>
+    <div class="pre" id="pre-ico">&lt;span class="ico-logo"&gt;&lt;/span&gt;</div>
+
+    <ul class="chars list-inline">
+        <li><a href="#"><span class="ico-logo"></span></a></li>
+        <li><a href="#"><span class="ico-vkontakte"></span></a></li>
+        <li><a href="#"><span class="ico-facebook"></span></a></li>
+        <li><a href="#"><span class="ico-twitter"></span></a></li>
+        <li><a href="#"><span class="ico-google"></span></a></li>
+        <li><a href="#"><span class="ico-youtube"></span></a></li>
+        <li><a href="#"><span class="ico-rss"></span></a></li>
+        <li><a href="#"><span class="ico-phone"></span></a></li>
+        <li><a href="#"><span class="ico-calendar"></span></a></li>
+        <li><a href="#"><span class="ico-search"></span></a></li>
+        <li><a href="#"><span class="ico-star"></span></a></li>
+        <li><a href="#"><span class="ico-pin"></span></a></li>
+        <li><a href="#"><span class="ico-cloud"></span></a></li>
+        <li><a href="#"><span class="ico-exclaim"></span></a></li>
+    </ul>
+
+
+
+    <div class="clearfix"></div><br><hr>
+
+    <h3>Icons SVG</h3>
+    <strong>Using:</strong>
+    <div class="pre" id="pre-svg">&lt;svg viewBox="0 0 100 100"&gt;&lt;use xlink:href="#svg-logo"&gt;&lt;/use&gt;&lt;/svg&gt;</div>
+
+    <ul class="chars-svg list-inline">
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-logo"></use></svg></a></li>
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-calendar"></use></svg></a></li>
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-search1"></use></svg></a></li>
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-phone"></use></svg></a></li>
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-pin"></use></svg></a></li>
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-exclaim"></use></svg></a></li>
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-cloud"></use></svg></a></li>
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-star"></use></svg></a></li>
+
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-clock"></use></svg></a></li>
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-coin"></use></svg></a></li>
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-document"></use></svg></a></li>
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-cog"></use></svg></a></li>
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-dialog"></use></svg></a></li>
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-jewelery"></use></svg></a></li>
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-search2"></use></svg></a></li>
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-rocket"></use></svg></a></li>
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-motorbike"></use></svg></a></li>
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-truck"></use></svg></a></li>
+
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-vkontakte"></use></svg></a></li>
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-facebook"></use></svg></a></li>
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-twitter"></use></svg></a></li>
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-google"></use></svg></a></li>
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-youtube"></use></svg></a></li>
+        <li><a href="#"><svg viewBox="0 0 100 100"><use xlink:href="#svg-rss"></use></svg></a></li>
+    </ul>
+
+//= partials/_footer.html
+
+<script>
+    (function($){
+        $(document).on('click', '.chars a', function(e) {
+            var className = e.target.className || e.target.children[0].className;
+            $('#pre-ico').html('&lt;span class="'+className+'"&gt;&lt;/span&gt;');
+        });
+        $(document).on('click', '.chars-svg a', function(e) {
+            var className = e.target.tagName=='use'
+                    ? $(e.target).attr('xlink:href')
+                    : $(e.target.firstChild).attr('xlink:href');
+            var html = '&lt;svg viewBox="0 0 100 100"&gt;&lt;use xlink:href="'+className+'"&gt;&lt;/use&gt;&lt;/svg&gt;';
+            $('#pre-svg').html(html);
+            console.log(className, html);
+//            console.dir(e.target);
+        });
+    })(jQuery);
+</script>

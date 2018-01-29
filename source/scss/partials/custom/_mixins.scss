@@ -1,0 +1,50 @@
+@mixin typography-heads($_set) {
+  $typography-head-set: (1:36, 2:30, 3:24, 4:18, 5:16, 6:14) !default;
+  @if($_set == xs) {$typography-head-set: (1:36, 2:30, 3:24, 4:18, 5:16, 6:14) !global;}
+  @if($_set == sm) {$typography-head-set: (1:48, 2:36, 3:30, 4:24, 5:18, 6:16) !global;}
+  @if($_set == md) {$typography-head-set: (1:60, 2:48, 3:36, 4:30, 5:24, 6:18) !global;}
+
+  @each $index,$size in $typography-head-set {
+    h#{$index},.h#{$index} {
+      font-size: $size+px;
+    }
+  }
+}
+
+
+// $ws = Weight / Style
+@mixin include-font($name, $alias, $weight, $style, $dir) {
+  @font-face {
+    font-family: $name;
+    src: url('../fonts/#{$dir}.eot');
+    src: url('../fonts/#{$dir}.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/#{$dir}.woff2') format('woff2'),
+    url('../fonts/#{$dir}.woff') format('woff'),
+    url('../fonts/#{$dir}.ttf') format('truetype'),
+    url('../fonts/#{$dir}.svg##{$alias}') format('svg');
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+//@mixin include-font($name, $alias, $ws) {
+//  // $ws = Weight / Style
+//  @font-face {
+//
+//    font-family: $name;
+//    src: url('../fonts/#{$alias}/#{$alias}-#{$ws}.eot');
+//    src: url('../fonts/#{$alias}/#{$alias}-#{$ws}.eot?#iefix') format('embedded-opentype'),
+//         url('../fonts/#{$alias}/#{$alias}-#{$ws}.woff2') format('woff2'),
+//         url('../fonts/#{$alias}/#{$alias}-#{$ws}.woff') format('woff'),
+//         url('../fonts/#{$alias}/#{$alias}-#{$ws}.ttf') format('truetype'),
+//         url('../fonts/#{$alias}/#{$alias}-#{$ws}.svg##{$alias}') format('svg');
+//
+//    @if($ws == BI) {
+//      font-weight: bold;
+//      font-style: italic;
+//    } @else {
+//      font-weight: if($ws==B, bold, normal);
+//      font-style: if($ws==I, normal, italic);
+//    }
+//  }
+//}

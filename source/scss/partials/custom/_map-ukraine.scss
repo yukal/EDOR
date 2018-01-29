@@ -1,0 +1,29 @@
+/* MAP OF UKRAINE */
+
+#map-ukraine {
+  polygon, path {
+    stroke: #F0A000;
+    stroke-width: 1.2;
+    fill:#FFAC00;
+    cursor: pointer;
+    -webkit-transition: fill 300ms;
+    -moz-transition: fill 300ms;
+    -o-transition: fill 300ms;
+    transition: fill 300ms;
+
+    &:not(.active):hover {
+      fill: #e69400;
+    }
+  }
+  text {
+    font-weight: bold;
+    font-size: 12px;
+    //font-family: 'Arial';
+    &:not(.active) {
+      display: none;
+    }
+  }
+  .active {
+    fill: #ffc847;
+  }
+}

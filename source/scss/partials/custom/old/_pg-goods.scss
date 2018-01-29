@@ -1,0 +1,143 @@
+/* PAGE GOODS */
+
+#pg-goods {
+  .presentation {
+    h2 {
+      margin: 0 0 10px 0;
+      text-align: center;
+      font-size: 28px;
+      //font-size: 60px;
+      + p {
+        margin-bottom: 45px;
+        text-align: center;
+        font-size: 18px;
+        //font-size: 21px;
+        //font-size: 28px;
+      }
+    }
+  }
+
+  figcaption {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .row {
+    margin-bottom: 60px;
+
+    p {
+      font-size: 21px;
+      line-height: 30px;
+      //line-height: 24px;
+      margin-bottom: 0;
+    }
+
+    [class^="col-"]:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+
+  .alert {
+    margin-bottom: 60px;
+
+    .col-sm-6:first-child {
+      font-size: 21px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 16px 25px;
+      font-size: 21px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .row, .col-sm-6+.col-sm-6 {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  a+p, img+p {
+    margin-top: 20px;
+  }
+
+
+  @media (min-width: 768px) {
+    .presentation {
+      h2 {
+        font-size: 48px;
+        + p {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .row {
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 0;
+      }
+    }
+
+    .alert {
+      .col-sm-6:first-child {
+        text-align: left;
+      }
+
+      button {
+        padding: 24px 30px;
+        font-size: 24px;
+      }
+
+      .row, .row .col-sm-6 {
+        margin: 0;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    .presentation {
+      h2 {
+        font-size: 60px;
+        +p {
+          font-size: 28px;
+        }
+      }
+    }
+
+    .alert {
+      .row {
+        display: table;
+      }
+
+      .col-sm-6 {
+        &:first-child, &:last-child {
+          display: table-cell;
+          float: none;
+          vertical-align: middle;
+          text-align: left;
+        }
+      }
+
+      button {
+        padding: 24px 0;
+        font-size: 30px;
+        width: 380px;
+      }
+
+      .row, .row .col-sm-6 {
+        margin: 0;
+        padding: 0;
+        width: auto;
+      }
+    }
+  }
+
+}
+

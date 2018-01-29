@@ -1,0 +1,59 @@
+/* FOOTER */
+
+footer {
+  @include clearfix;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 13px;
+
+  .navbar-brand {
+    display: block;
+    margin: 0;
+    width: 100px;
+    height: 100px;
+    text-indent: 100px;
+  }
+
+  dl {
+    strong {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    > dt {
+      margin-top: 10px;
+    }
+
+    > dd {
+      float: none;
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .ico-pin {
+    position: relative;
+    top: 4px;
+    font-size: 30px;
+    color: #ffac00;
+  }
+
+  ul.list-inline {
+    li {
+      padding: 0;
+      +li {
+        padding-left: 2px;
+      }
+    }
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .row {
+    margin: 0 !important;
+  }
+
+}

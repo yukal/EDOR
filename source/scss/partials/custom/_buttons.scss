@@ -1,0 +1,99 @@
+a.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  outline: 0;
+  border: 0;
+  //-webkit-border-radius: 5px;
+  //-moz-border-radius: 5px;
+  border-radius: 5px;
+  font-family: $font-family-ascended;
+  text-align: center;
+
+  //&.main {
+    background: #ffc847;
+    background: -moz-linear-gradient(top, #ffc847 4%, #ffac00 82%);
+    background: -webkit-linear-gradient(top, #ffc847 4%, #ffac00 82%);
+    background: linear-gradient(to bottom, #ffc847 4%, #ffac00 82%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc847', endColorstr='#ffac00', GradientType=0);
+    &:hover {
+      background: #ffbb31;
+      background: -moz-linear-gradient(top, #ffbb31 4%, #ee9900 82%);
+      background: -webkit-linear-gradient(top, #ffbb31 4%, #ee9900 82%);
+      background: linear-gradient(to bottom, #ffbb31 4%, #ee9900 82%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbb31', endColorstr='#ee9900', GradientType=0);
+    }
+  //}
+
+
+  //@media (min-width: 325px) {
+  @media (max-width: 295px) {
+    //padding: 0 !important;
+    //background: red !important;
+    //font-size: 18px !important;
+    //&.transform-xs-large {
+    //  padding: 5vw 20vw !important;
+    //  font-size: 9vw !important;
+    //}
+  }
+
+  // <= 380px
+  @media (max-width: $screen-xs - 100) {
+    //&.transform-xs-large {
+    padding: 5vw 20vw !important;
+    font-size: 9vw !important;
+    //}
+  }
+
+  // >= 480px
+  @media (min-width: $screen-xs) {
+    padding: 20px 54px;
+    font-size: 28px;
+  }
+
+
+  // <= 767px
+  @media (max-width: $screen-sm - 1) {
+    padding: 14px 30px;
+    font-size: 28px;
+    //font-size: 21px;
+    &.transform-xs-large {
+      padding: 14px 60px;
+      //font-size: 28px;
+      //padding: 5vw 20vw !important;
+      //font-size: 9vw !important;
+    }
+  }// <= 767px
+
+
+  // >= 768px
+  @media (min-width: $screen-sm) {
+    //
+  }// >= 768px
+
+
+  // >= 992px
+  @media (min-width: $screen-md) {
+    &.mega {
+      //display: block;
+      //margin: 0;
+      display: table-cell;
+      padding: 14px 0 21px;
+      width: 600px;
+      height: 120px;
+      font-size: 60px;
+    }
+  }// >= 992px
+
+
+  // >= 1200px
+  @media (min-width: $screen-lg) {
+    //
+  }
+
+
+}
+

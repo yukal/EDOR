@@ -1,0 +1,23 @@
+#svg-coin path:last-child,
+#svg-document path:last-child,
+#svg-jewelery path:nth-child(2),
+#svg-motorbike path:last-child,
+#svg-search path:last-child,
+#svg-rocket path:last-child,
+#svg-truck path:last-child,
+#svg-cog path:last-child,
+#svg-dialog path:nth-child(3),
+#svg-clock path:first-child {
+  fill: #F8AA12;
+}
+#svg-jewelery path:last-child {
+  fill: #FFFFFF;
+}
+#svg-sky {
+  fill: #C6F5FF;
+}
+.svg.cloud {
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSIjYzZmNWZmIiBkPSJNODksMzYuOEM5MC45MSwxOS42Nyw2OS40MSw5Ljg2LDU3LjgzLDIyLjg2YTIwLjUxLDIwLjUxLDAsMCwwLTMzLjE5LDYuODVDMTMuOSwyMy4yMSwyLjU2LDM0LDgsNDQuODNjLTIwLjMxLDE3LjYsMi44Myw0NS4yNSwyMy44NiwzMGExOS44MywxOS44MywwLDAsMCwzMy42Ni0yLjM2YzI0LjkyLDE1LDQ5LTE4LjQzLDIzLjUtMzUuNjhaIi8+PC9zdmc+');
+  background-repeat: no-repeat;
+  background-position: center;
+}

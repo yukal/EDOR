@@ -1,0 +1,75 @@
+//@include include-font('Anselm Sans', AnselmSans, R);
+//@include include-font('Anselm Sans', AnselmSans, B);
+//@include include-font('Anselm Sans', AnselmSans, I);
+//@include include-font('Roboto Slab', RobotoSlab, B);
+@include include-font('Anselm Sans', 'AnselmSans', 'normal', 'normal', '../fonts/anselm/AnselmSans');
+@include include-font('Anselm Sans', 'AnselmSans', 'bold', 'normal', '../fonts/anselm/AnselmSans-Bold');
+@include include-font('Anselm Sans', 'AnselmSans', 'normal', 'italic', '../fonts/anselm/AnselmSans-Italic');
+@include include-font('Roboto Slab', 'RobotoSlab', 'bold', 'normal', '../fonts/roboto/RobotoSlab-Bold');
+/*
+ * Icomoon
+ * url: https://icomoon.io/app/
+ *
+ */
+@include include-font('icomoon', 'icomoon', 'normal', 'normal', '../fonts/icomoon/icomoon');
+
+
+[class^="ico-"], [class*="ico-" ] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font: {
+    family: 'icomoon' !important;
+    style: normal;
+    weight: normal;
+    variant: normal;
+  }
+
+  speak: none;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.ico-vkontakte:before {content: "\e900";}
+.ico-facebook:before  {content: "\e901";}
+.ico-twitter:before   {content: "\e902";}
+.ico-google:before    {content: "\e903";}
+.ico-youtube:before   {content: "\e904";}
+.ico-rss:before       {content: "\e905";}
+.ico-phone:before     {content: "\e906";}
+.ico-calendar:before  {content: "\e907";}
+.ico-search:before    {content: "\e908";}
+.ico-star:before      {content: "\e909";}
+.ico-pin:before       {content: "\e90a";}
+.ico-cloud:before     {content: "\e90b";}
+.ico-logo:before      {content: "\e90c";}
+.ico-exclaim:before   {content: "\e90d";}
+
+
+//.ico {
+//  $icons: (
+//          '\e900': vkontakte,
+//          '\e901': facebook,
+//          '\e902': twitter,
+//          '\e903': google,
+//          '\e904': youtube,
+//          '\e905': rss,
+//          '\e906': phone,
+//          '\e907': calendar,
+//          '\e908': search,
+//          '\e909': star,
+//          '\e90a': pin,
+//          '\e90b': cloud,
+//          '\e90c': logo,
+//          '\e90d': exclaim
+//  );
+//
+//  @each $code, $name in $icons {
+//    &-#{$name}:before {
+//      content: '#{$code}';
+//    }
+//  }
+//}

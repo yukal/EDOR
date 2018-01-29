@@ -1,0 +1,139 @@
+/* FOOTER */
+
+footer {
+  @include make-row();
+  //@include clearfix();
+  margin-top: $margin-lg+50px;
+  margin-bottom: $margin-sm;
+  padding-top: $margin-sm;
+  //width: 100%;
+  font-size: 14px;
+  line-height: 2.5rem;
+  border-top: 1px solid #ddd;
+  address {
+    margin: 0;
+    line-height: 2.5rem;
+  }
+
+  .navbar-brand {
+    //display: block;
+    margin: 0;
+    //width: 100px;
+    //height: 100px;
+    //text-indent: 100px;
+  }
+
+  //dl {
+  //  strong {
+  //    font-size: 18px;
+  //    font-weight: bold;
+  //  }
+  //  > dt {
+  //    margin-top: 10px;
+  //  }
+  //  > dd {
+  //    float: none;
+  //    display: block;
+  //    width: 100%;
+  //    height: auto;
+  //  }
+  //}
+
+  .ico-pin {
+    position: relative;
+    top: 4px;
+    font-size: 30px;
+    color: #ffac00;
+  }
+
+  //ul.list-inline {
+  //  li {
+  //    padding: 0;
+  //    +li {
+  //      padding-left: 2px;
+  //    }
+  //  }
+  //  svg {
+  //    width: 24px;
+  //    height: 24px;
+  //  }
+  //}
+
+  .social {
+    //display: table;
+    //text-align: right;
+    //@include clearfix();
+    margin-top: $margin-xs+5;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: right;
+    li {
+      //display: table-cell;
+      padding: 0;
+      text-align: center;
+      vertical-align: middle;
+      overflow: hidden;
+      //background-color: #67b168;
+    }
+    a {
+      display: block;
+      padding: 4px;
+      overflow: hidden;
+      line-height: 0;
+      text-decoration: none;
+      font-size: 23px;
+      color: silver;
+      [class^="ico-"] {
+        width: 28px;
+        height: 28px;
+        //background-color: red;
+      }
+    }
+  }
+
+  .row {
+    margin: 0 !important;
+  }
+
+
+  // MEDIA QUERIES
+
+  // <= 767px
+  @media (max-width: $screen-sm - 1) {
+    .item {
+      margin-bottom: $margin-xs + 5;
+      font-size: 16px;
+      line-height: 1.8;
+      text-align: center;
+      .navbar-brand {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        width: 70px;
+        height: 70px;
+      }
+    }
+    .social {
+      text-align: center;
+      a {
+        font-size: 30px;
+      }
+    }
+  }
+
+  // >= 768px
+  @media (min-width: $screen-sm) {
+    .social {
+      padding-right: 10px;
+    }
+  }
+
+  // >= 992px
+  @media (min-width: $screen-md) {
+    .social {
+      padding-right: 20px;
+    }
+  }
+
+}
+
