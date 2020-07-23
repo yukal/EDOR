@@ -61,19 +61,10 @@
 bower i --save bootstrap-sass
 
 :: Install Gulp and Utils
-npm i --save-dev gulp
-npm i --save-dev gulp-util
-npm i --save-dev gulp-concat
-npm i --save-dev gulp-autoprefixer
-npm i --save-dev gulp-sourcemaps
-npm i --save-dev gulp-rigger
-
-:: Install Minifiers for JS/CSS
-npm i --save-dev gulp-uglify
+npm i --save-dev gulp gulp-util gulp-concat gulp-autoprefixer gulp-sourcemaps gulp-rigger gulp-uglify
 
 :: Install Minifiers for Images
-npm i --save-dev gulp-imagemin
-npm i --save-dev imagemin-pngquant
+npm i --save-dev gulp-imagemin imagemin-pngquant
 
 :: Install Gulp for Sass
 npm i --save-dev gulp-sass
